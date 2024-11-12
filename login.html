@@ -1,0 +1,28 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TeleMed - Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="/authenticate" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <div>
+        <% if (messages.error) { %>
+            <p class="error"><%= messages.error %></p>
+        <% } %>
+        <% if (messages.success) { %>
+            <p class="success"><%= messages.success %></p>
+        <% } %>
+    </div>
+    
+</body>
+</html>
